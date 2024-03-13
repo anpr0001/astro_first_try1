@@ -1,0 +1,27 @@
+---
+/*const header = Astro.props.header;
+const text = Astro.props.text;
+En anden måde at skrive nedenstående på*/
+
+const{header} = Astro.props
+
+---
+
+    
+ <article class="card">
+	<h2>{header}</h2>
+    <p>Kortere Lorem Ipsum</p>
+<slot />
+<!-- slot er hvad som helst der ligger i komponent eks. Card og Navigation i dette tilfælde et billede-->
+
+</article>
+
+<style>
+    p{
+        color: royalblue;
+    }
+    /*skriv kun ting der bliver brugt til specifikke komponenter her, ellers i style.css, da når skrevte her blivre styles.css overskrevet*/
+.card{
+    background-color: azure;
+}
+</style>
